@@ -1,0 +1,114 @@
+.questions__content {
+  position: relative;
+}
+
+.questions__container {
+  padding-top: 25px;
+  padding-bottom: 30px;
+  @media screen and (min-width: 480px) {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+  @media screen and (min-width: 760px) {
+    padding-top: 80px;
+    padding-bottom: 95px;
+  }
+  @media screen and (min-width: 960px) {
+    padding-top: 100px;
+    padding-bottom: 118px;
+  }
+}
+
+.questions__img {
+  position: absolute;
+  width: 81%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.questions__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: auto;
+  text-align: left;
+  background-color: $color_bg-primary;
+  width: 280px;
+  padding: 20px 15px 20px 20px;
+  z-index: 2;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    padding: 30px 15px 30px 30px;
+  }
+  @media screen and (min-width: 760px) {
+    width: 528px;
+    padding: 40px 15px 40px 40px;
+  }
+  @media screen and (min-width: 960px) {
+    padding: 40px 15px 40px 40px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 50px 10px 50px 50px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 10px;
+    height: 100%;
+    background-color: $color_accent;
+    @media screen and (min-width: 480px) {
+      width: 15px;
+    }
+  }
+}
+
+.questions__box__title {
+  font-weight: 700;
+  font-size: 20px;
+  @media screen and (min-width: 480px) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: 760px) {
+    font-size: 36px;
+  }
+}
+
+.questions__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.questions__form__input {
+  outline: transparent;
+  color: $color_text-first;
+  width: 100%;
+  padding: 10px 15px;
+  border: solid 1px $color_main;
+  border-radius: 3px;
+  font-size: 16px;
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+    padding: 14px 15px;
+  }
+  &::placeholder {
+    opacity: 0.6;
+  }
+}
+
+.questions__box__text {
+  width: 220px;
+  font-size: 16px;
+  @media screen and (min-width: 480px) {
+    width: 360px;
+  }
+  @media screen and (min-width: 760px) {
+    width: 395px;
+    font-size: 18px;
+  }
+}

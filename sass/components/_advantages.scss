@@ -1,0 +1,163 @@
+.advantages__list {
+  position: relative;
+  overflow: hidden;
+}
+
+.advantages__item {
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    .advantages__item__text {
+      position: relative;
+      bottom: 0;
+    }
+  }
+}
+
+.advantages__item__info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: start;
+  gap: 15px;
+  color: $color_text-second;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  padding: 20px;
+  @media screen and (min-width: 480px) {
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    padding: 25px;
+  }
+  @media screen and (min-width: 760px) {
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    padding: 20px;
+  }
+  @media screen and (min-width: 960px) {
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    padding: 25px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+    padding: 30px;
+  }
+  @media screen and (min-width: 1600px) {
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    padding: 25px;
+  }
+  @media screen and (min-width: 1920px) {
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+    padding: 30px;
+  }
+}
+
+.advantages__item__title {
+  position: relative;
+  font-size: 20px;
+  @media screen and (min-width: 480px) {
+    font-size: 28px;
+  }
+  @media screen and (min-width: 760px) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: 960px) {
+    font-size: 28px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+  }
+  @media screen and (min-width: 1600px) {
+    font-size: 30px;
+  }
+  @media screen and (min-width: 1920px) {
+    font-size: 36px;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: -1;
+    width: 100%;
+    height: 3px;
+    background-color: $color_second;
+  }
+}
+
+.advantages__item__text {
+  position: absolute;
+  bottom: 100%;
+  font-size: 12px;
+  @media screen and (min-width: 480px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 760px) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: 960px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 1600px) {
+    font-size: 16px;
+  }
+  @media screen and (min-width: 1920px) {
+    font-size: 18px;
+  }
+}
+
+.advantages__buttons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.advantages__buttons__left,
+.advantages__buttons__right {
+  position: absolute;
+  top: calc(50% - 15px);
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  fill: transparent;
+  stroke: $color_third;
+  transition: all 300ms $cubic;
+  z-index: 2;
+  &:hover,
+  &:focus {
+    fill: $color_third;
+    stroke: $color_main;
+  }
+}
+
+.advantages__buttons__left {
+  left: 10px;
+  @media screen and (min-width: 960px) {
+    left: 15px;
+  }
+}
+
+.advantages__buttons__right {
+  right: 10px;
+  transform: rotate(180deg);
+  @media screen and (min-width: 960px) {
+    right: 15px;
+  }
+}

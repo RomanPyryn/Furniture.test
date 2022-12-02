@@ -1,0 +1,236 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: transparent;
+  transition: all 300ms $cubic;
+  &:hover,
+  &:focus {
+    color: $color_accent;
+  }
+}
+
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url(../../fonts/ProximaNova-Regular.ttf) format("ttf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url(../../fonts/ProximaNova-Semibold.ttf) format("ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url(../../fonts/ProximaNova-Bold.ttf) format("ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url(../../fonts/ProximaNova-Extrabld.ttf) format("ttf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url(../../fonts/ProximaNova-Black.ttf) format("ttf");
+  font-weight: 900;
+}
+
+body {
+  font-family: $font;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.25;
+  margin: 0;
+  color: $color_text-first;
+  background-color: $color_bg-primary;
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 320px;
+
+  margin: 0 auto;
+  padding: 0 5px;
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+    padding: 0 10px;
+  }
+  @media screen and (min-width: 760px) {
+    max-width: 760px;
+    padding: 0 15px;
+  }
+  @media screen and (min-width: 960px) {
+    max-width: 960px;
+    padding: 0 25px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    padding: 0 40px;
+  }
+  @media screen and (min-width: 1600px) {
+    max-width: 1600px;
+    padding: 0 50px;
+  }
+  @media screen and (min-width: 1920px) {
+    max-width: 1920px;
+  }
+}
+
+.section {
+  text-align: center;
+  padding-top: 75px;
+  @media screen and (min-width: 760px) {
+    padding-top: 100px;
+  }
+  &.questions {
+    padding-bottom: 85px;
+    @media screen and (min-width: 760px) {
+      padding-bottom: 110px;
+    }
+  }
+}
+
+.section__title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 50px;
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -2px;
+    top: 2px;
+    width: 10px;
+    height: 26px;
+    background-color: $color_accent;
+    @media screen and (min-width: 480px) {
+      left: -4px;
+      top: 4px;
+      width: 15px;
+      height: 38px;
+    }
+    @media screen and (min-width: 760px) {
+      left: -4px;
+      top: 4px;
+      width: 20px;
+      height: 50px;
+    }
+  }
+}
+
+.section__title__text {
+  position: relative;
+  font-size: 24px;
+  font-weight: 700;
+  white-space: nowrap;
+  z-index: 2;
+  @media screen and (min-width: 480px) {
+    font-size: 36px;
+  }
+  @media screen and (min-width: 760px) {
+    font-size: 48px;
+  }
+}
+
+.active {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: -1;
+    width: 100%;
+    height: 3px;
+    background-color: $color_second;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-weight: 700;
+  background-color: $color_second;
+  color: $color_text-second;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 12px 46px;
+  cursor: pointer;
+  font-size: 16px;
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+    padding: 14px 46px;
+  }
+}
+
+.bg_img {
+  position: relative;
+}
+
+.bg_img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+}

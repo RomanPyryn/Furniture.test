@@ -1,0 +1,121 @@
+.header__bottom__box {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  min-height: 105px;
+  padding: 15px 0;
+  gap: 15px;
+  @media screen and (min-width: 1600px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  @media screen and (min-width: 1920px) {
+    gap: 115px;
+  }
+}
+
+.header__bottom__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  @media screen and (min-width: 760px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header__categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 15px;
+  @media screen and (min-width: 760px) {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 1600px) {
+    width: auto;
+  }
+}
+
+.header__logo__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.header__logo__icon {
+  width: 100px;
+  @media screen and (min-width: 960px) {
+    width: 125px;
+  }
+}
+
+.header__logo__text {
+  font-size: 28px;
+  color: $color_text-third;
+  @media screen and (min-width: 960px) {
+    font-size: 36px;
+  }
+}
+
+.header__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  @media screen and (min-width: 480px) {
+    flex-direction: row;
+  }
+  @media screen and (min-width: 760px) {
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+}
+
+.header__buttons__cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-size: 16px;
+  font-weight: inherit;
+  background-color: $color_bg-primary;
+  text-transform: uppercase;
+  gap: 5px;
+  cursor: pointer;
+  fill: $color_main;
+  transition: all 300ms $cubic;
+	@media screen and (min-width: 480px) {
+    font-size: 18px;
+  }
+  &:hover,
+  &:focus {
+    color: $color_accent;
+    fill: $color_accent;
+  }
+}
+
+.header__buttons__call {
+  width: 100%;
+  white-space: nowrap;
+  @media screen and (min-width: 480px) {
+    width: auto;
+  }
+  @media screen and (min-width: 760px) {
+    padding: 14px 30px;
+  }
+  @media screen and (min-width: 960px) {
+    padding: 14px 46px;
+  }
+}

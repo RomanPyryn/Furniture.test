@@ -1,0 +1,82 @@
+.about__content {
+  position: relative;
+}
+
+.about__container {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	@media screen and (min-width: 480px) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+  }
+  @media screen and (min-width: 760px) {
+		padding-top: 80px;
+		padding-bottom: 80px;
+  }
+  @media screen and (min-width: 960px) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+  }
+}
+
+.about__img {
+  position: absolute;
+  width: 73%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+.about__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+  background-color: $color_bg-primary;
+  width: 280px;
+  padding: 20px 20px 20px 15px;
+  z-index: 2;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    padding: 30px 30px 30px 15px;
+  }
+  @media screen and (min-width: 760px) {
+    width: 600px;
+    padding: 40px 40px 40px 15px;
+  }
+  @media screen and (min-width: 960px) {
+    width: 770px;
+    padding: 40px 40px 40px 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 790px;
+    padding: 50px 50px 50px 10px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 10px;
+    height: 100%;
+    background-color: $color_accent;
+    @media screen and (min-width: 480px) {
+      width: 15px;
+    }
+  }
+}
+
+.about__box__text {
+  font-size: 16px;
+  @media screen and (min-width: 760px) {
+    font-size: 18px;
+  }
+}
+
+.about__box__text-accent {
+  font-size: inherit;
+  font-weight: 700;
+  color: $color_text-third;
+}
